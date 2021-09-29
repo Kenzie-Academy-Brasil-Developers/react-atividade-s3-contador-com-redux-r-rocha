@@ -1,13 +1,20 @@
 import "./App.css";
-import Counter from "./components/Counter";
 import Display from "./components/Display";
+import Counter from "./components/Counter";
+import { Grid } from "@material-ui/core";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Display />
-        <Counter />
+        <Grid container flexDirection="column" alignItems="center">
+          <Grid item>
+            <Display />
+          </Grid>
+          <Grid item>
+            <Counter />
+          </Grid>
+        </Grid>
       </header>
     </div>
   );
